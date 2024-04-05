@@ -9,5 +9,8 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
   title = 'pokedex';
+
+  urlGeneration = 'https://pokeapi.co/api/v2/generation/';
 }
