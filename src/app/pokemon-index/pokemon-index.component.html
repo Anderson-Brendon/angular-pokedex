@@ -1,1 +1,10 @@
-<p>pokemon-index works!</p>
+@for(pokemon of pokemonList; track pokemon.name){
+  <section>
+    <p>{{pokemon.name}}</p>
+    <a [routerLink]="['/pokemon-details', offset+$index+1]">
+      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{offset+$index+1}}.png">
+    </a>
+  </section>
+}
+
+<!--vou ter q pegar offset pra pegar img dos poke-->

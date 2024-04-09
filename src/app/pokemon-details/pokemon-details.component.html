@@ -1,1 +1,11 @@
-<p>pokemon-details works!</p>
+@if(pokemonDetails && pokemonDescription){
+  <section>
+    <h1>{{pokemonDetails.name}}</h1>
+    <img src="{{pokemonDetails.sprites.other['official-artwork'].front_default}}">
+    <audio controls src="{{pokemonDetails.cries.latest}}"></audio>
+    <p><span>Type:</span> {{pokemonDetails.types[0].type.name}}</p>
+    <p><span>Description:</span>{{pokemonDescription.flavor_text_entries[0].flavor_text}} </p>
+  </section>
+}@else{
+  <h1>Pokemon not found</h1>
+}
