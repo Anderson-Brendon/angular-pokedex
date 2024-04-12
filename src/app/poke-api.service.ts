@@ -9,15 +9,16 @@ import { HttpClient } from '@angular/common/http';
 export class PokeApiService {
 
 
-  constructor(private http : HttpClient) {
-
-  }
+  constructor(private http : HttpClient) {}
 
   urlPokemonDetails: string = `https://pokeapi.co/api/v2/pokemon/`;
 
   urlImg = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png';
 
   urlPokemonDescription = 'https://pokeapi.co/api/v2/pokemon-species/1'
+
+
+  pokemonsPerPage: number = 9;
 
   pokemonList: any;
 
@@ -26,25 +27,28 @@ export class PokeApiService {
   pokemonNames: any;
 
   pokemonGeneration = {
-    first:{offset: 0, limit:151},//151
-    second:{offset: 151, limit: 100},//251
-    third: {offset:251, limit: 135},//386
-    fourth:{offset:386, limit:107},//493
-    fifth:{offset:493, limit:156},//649
-    sixth:{offset:649, limit: 72},//
+    first:{offset: 0, limit:151},
+    second:{offset: 151, limit: 100},
+    third: {offset:251, limit: 135},
+    fourth:{offset:386, limit:107},
+    fifth:{offset:493, limit:156},
+    sixth:{offset:649, limit: 72},
     seventh:{offset:721, limit:88},
     eighth:{offset:809, limit:96},
     ninth:{offset:905, limit:120}
   }
 
+  //retorna observável para solicitar listagem dos nomes dos pokemons e a url com detalhes
   requestPokemonList(offset: number, limit: number){
     return this.http.get(`https://pokeapi.co/api/v2/pokemon?limit=${limit}&offset=${offset}`);
   }
 
+  //retorna observável para solicitar de descrição de pokemon
   requestPokemonDescription(id: number | string){
     return this.http.get(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
   }
 
+  //retorna observável para solicitar os detalhes de um pokemon, podendo receber como argumento tanto um numero de id quanto uma string com o nome exato
   requestPokemonDetails(id: number | string){
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
   }

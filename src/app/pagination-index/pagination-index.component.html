@@ -1,1 +1,8 @@
-<p>pagination-index works!</p>
+@for(page of pagesNumber; track page){
+  @if(totalOfPokemons > pokeApi.pokemonsPerPage * ($index + 1)){
+  <a [routerLink]="['/pokemon-list',generationToPaginate,offset + pokeApi.pokemonsPerPage * $index, pokeApi.pokemonsPerPage ]">{{page + 1}}</a>
+  }
+  @else{
+   <a [routerLink]="['/pokemon-list',generationToPaginate,offset + pokeApi.pokemonsPerPage * $index, totalOfPokemons - pokeApi.pokemonsPerPage * $index]">{{page + 1}}</a>
+  }
+}

@@ -4,13 +4,12 @@ import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.compo
 
 export const routes: Routes = [
   {path:'',
-  redirectTo:'pokemon-list/0/10',
+  redirectTo:'pokemon-list/first/0/9',
   pathMatch: 'full'},
   {path: 'pokemon-details/:id',
   component: PokemonDetailsComponent,
   title: 'Pokemon details'},
-  {path: 'pokemon-list/:offset/:limit',
+  {path: 'pokemon-list/:generation/:offset/:limit',
   component: PokemonIndexComponent,
   title: 'Pokemon list'}
 ];
-//remove os parametros e o componente aparece pq nao pode ter opcionais aqui tem q ser a url toda

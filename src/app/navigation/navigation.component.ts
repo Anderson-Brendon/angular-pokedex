@@ -12,7 +12,7 @@ import { FormsModule } from '@angular/forms';
 })
 export class NavigationComponent {
 
-  constructor(private pokeApi: PokeApiService){
+  constructor(public pokeApi: PokeApiService){
     this.pokemonQuery = this.pokeApi.pokemonGeneration;
   }
 

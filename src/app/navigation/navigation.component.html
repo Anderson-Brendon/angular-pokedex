@@ -7,15 +7,15 @@
       }
     </div>
     <ul>
-     <li><a [routerLink]="['/pokemon-list',pokemonQuery.first.offset, 10]">Generation I</a></li>
-        <li><a [routerLink]="['/pokemon-list',pokemonQuery.second.offset, 10]">Generation II</a></li>
-        <li><a [routerLink]="['/pokemon-list',pokemonQuery.third.offset, 10]">Generation III</a></li>
-        <li><a [routerLink]="['/pokemon-list',pokemonQuery.fourth.offset, 10]">Generation IV</a></li>
-        <li><a [routerLink]="['/pokemon-list',pokemonQuery.fifth.offset, 10]">Generation V</a></li>
-        <li><a [routerLink]="['/pokemon-list',pokemonQuery.sixth.offset, 10]">Generation VI</a></li>
-        <li><a [routerLink]="['/pokemon-list',pokemonQuery.seventh.offset, 10]">Generation VII</a></li>
-        <li><a [routerLink]="['/pokemon-list',pokemonQuery.eighth.offset, 10]">Generation VIII</a></li>
-        <li><a [routerLink]="['/pokemon-list',pokemonQuery.ninth.offset, 10]">Generation IX</a></li>
+     <li><a [routerLink]="['/pokemon-list','first',pokemonQuery.first.offset, pokeApi.pokemonsPerPage]">Generation I</a></li>
+        <li><a [routerLink]="['/pokemon-list','second',pokemonQuery.second.offset, pokeApi.pokemonsPerPage]">Generation II</a></li>
+        <li><a [routerLink]="['/pokemon-list','third',pokemonQuery.third.offset, pokeApi.pokemonsPerPage]">Generation III</a></li>
+        <li><a [routerLink]="['/pokemon-list','fourth',pokemonQuery.fourth.offset, pokeApi.pokemonsPerPage]">Generation IV</a></li>
+        <li><a [routerLink]="['/pokemon-list','fifth',pokemonQuery.fifth.offset, pokeApi.pokemonsPerPage]">Generation V</a></li>
+        <li><a [routerLink]="['/pokemon-list','sixth',pokemonQuery.sixth.offset, pokeApi.pokemonsPerPage]">Generation VI</a></li>
+        <li><a [routerLink]="['/pokemon-list','seventh',pokemonQuery.seventh.offset, pokeApi.pokemonsPerPage]">Generation VII</a></li>
+        <li><a [routerLink]="['/pokemon-list','eighth',pokemonQuery.eighth.offset, pokeApi.pokemonsPerPage]">Generation VIII</a></li>
+        <li><a [routerLink]="['/pokemon-list','ninth',pokemonQuery.ninth.offset, pokeApi.pokemonsPerPage]">Generation IX</a></li>
     </ul>
   </nav>
 </main>
