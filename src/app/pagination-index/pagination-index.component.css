@@ -5,10 +5,17 @@ nav{
   margin: 1rem;
 }
 
- nav a{
+nav a:focus{
+  background-color: #dc3545;
+  color: azure;
+}
+
+nav a{
   margin-right: 1rem;
   margin-bottom: 1rem;
 }
+
+
 
 @media (min-width: 768px) {
   nav {

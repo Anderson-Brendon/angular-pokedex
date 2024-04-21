@@ -4,6 +4,11 @@
   background-color:#3c5aa6;
 }
 
+a:focus:not(div a){
+  background-color: #ffcc03;
+  color: black;
+}
+
 nav section{
   display: flex;
   justify-content: space-around;
