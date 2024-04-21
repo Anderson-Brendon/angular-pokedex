@@ -17,8 +17,7 @@ export class PokeApiService {
 
   urlPokemonDescription = 'https://pokeapi.co/api/v2/pokemon-species/1'
 
-
-  pokemonsPerPage: number = 9;
+  pokemonsPerPage: number = 18;
 
   pokemonList: any;
 
@@ -44,13 +43,25 @@ export class PokeApiService {
   }
 
   //retorna observável para solicitar de descrição de pokemon
-  requestPokemonDescription(id: number | string){
+  requestPokemonSpecies(id: number | string){
     return this.http.get(`https://pokeapi.co/api/v2/pokemon-species/${id}`)
   }
 
   //retorna observável para solicitar os detalhes de um pokemon, podendo receber como argumento tanto um numero de id quanto uma string com o nome exato
   requestPokemonDetails(id: number | string){
     return this.http.get(`https://pokeapi.co/api/v2/pokemon/${id}`)
+  }
+
+  requestEvolutionChain(url: string){
+    return this.http.get(url);
+  }
+
+  findFlavorText(flavor_text_entries: any[], lang: string = 'en'){
+    for (const flavor_text of flavor_text_entries) {
+      if(flavor_text.language.name === lang){
+        return flavor_text.flavor_text;
+      }
+    }
   }
 
 }

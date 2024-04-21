@@ -4,12 +4,12 @@ import { PokemonDetailsComponent } from './pokemon-details/pokemon-details.compo
 
 export const routes: Routes = [
   {path:'',
-  redirectTo:'pokemon-list/first/0/9',
+  redirectTo:'pokemon-list/first/0/18',
   pathMatch: 'full'},
   {path: 'pokemon-details/:id',
   component: PokemonDetailsComponent,
-  title: 'Pokemon details'},
+  title: 'Pokémon details'},
   {path: 'pokemon-list/:generation/:offset/:limit',
   component: PokemonIndexComponent,
-  title: 'Pokemon list'}
+  title: 'Pokémon list'}
 ];

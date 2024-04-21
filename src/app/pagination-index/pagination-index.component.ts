@@ -28,6 +28,10 @@ export class PaginationIndexComponent implements OnChanges,OnInit {
     this.calculatePagination();
   }
 
+  scrollToTop(){
+    window.scrollTo(0,0)
+  }
+
   ngOnChanges(changes: SimpleChanges): void {
     if(changes){
       this.calculatePagination();
@@ -36,7 +40,7 @@ export class PaginationIndexComponent implements OnChanges,OnInit {
 
   calculatePagination(){
     this.pagesNumber = [];
-     this.totalOfPokemons = this.pokeApi.pokemonGeneration[this.generationToPaginate].limit ;
+     this.totalOfPokemons = this.pokeApi.pokemonGeneration[this.generationToPaginate].limit;
      this.offset = this.pokeApi.pokemonGeneration[this.generationToPaginate].offset;
      let numberOfPages : any = Number(this.totalOfPokemons) / this.pokeApi.pokemonsPerPage;
      console.log('totalpoke=>',this.totalOfPokemons,'pokePage=>', this.pokeApi.pokemonsPerPage)

@@ -1,6 +1,6 @@
 import { Component} from '@angular/core';
 import { PokeApiService } from '../poke-api.service';
-import { RouterLink } from '@angular/router';
+import { Event, RouterLink } from '@angular/router';
 import { ActivatedRoute } from '@angular/router';
 import { OnInit,OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
@@ -66,4 +66,7 @@ export class PokemonIndexComponent implements OnInit,OnDestroy {
     })
   }
 
+  onLoadImg(event : any){
+    event.target.classList.add('img-load-complete');
+  }
  }

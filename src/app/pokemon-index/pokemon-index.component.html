@@ -1,9 +1,11 @@
+<div>
 @for(pokemon of pokemonList; track pokemon.name){
-  <section>
-    <p>{{pokemon.name}}</p>
-    <a [routerLink]="['/pokemon-details', offset+$index+1]">
-      <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{offset+$index+1}}.png">
+  <section class="col-sm-6 col-md-4">
+    <a [routerLink]="['/pokemon-details', offset+$index+1]" class="col-9">
+      <p class="text-dark">{{pokemon.name}}</p>
+      <img (load)="onLoadImg($event)" src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{offset+$index+1}}.png" class="img-fluid">
     </a>
   </section>
 }
+</div>
 <app-pagination-index [generationToPaginate]="pokemonGeneration"></app-pagination-index>
