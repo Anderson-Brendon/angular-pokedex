@@ -15,7 +15,6 @@ section{
 }
 
 section a{
-  background-image: url(/assets/pokeball-bg.png);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;

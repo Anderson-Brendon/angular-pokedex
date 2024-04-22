@@ -6,3 +6,4 @@ funções da aplicação:
 -paginação das listas para tornar a vizualização mais organizada
 -detalhes dos pokémons com algumas das suas características, incluindo sua cadeia de evolução, se disponível
 -input para pesquisar pokémons, podendo usar número inteiro ou string
+
