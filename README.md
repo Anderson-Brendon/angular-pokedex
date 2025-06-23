@@ -1,12 +1,13 @@
-aplicação construída com o intuito de praticar angular e o uso de api's
+# Angular-Pokedex
+* Application build with the goal to practice the angular framework and the usage of API's
 
-funções da aplicação:
+## App features:
 
--a navbar possui lista de todas as gerações de pokémons existentes, todas acessíveis de maneira isolada
+* The navbar has a list of all the existing pokémon generations, each one being acessible
 
--paginação das listas para tornar a vizualização mais organizada
+* Pagination of the pokémons list to turn the vizualization easier
 
--detalhes dos pokémons com algumas das suas características, incluindo sua cadeia de evolução, se disponível
+* Page to check pokémon details with some of his charactheristics, like the evolution chain, if avaiable
 
--input para pesquisar pokémons, podendo usar número inteiro ou string
+* Search bar to find pokémons, you can use a  number to find by id or a text to find by name
 
